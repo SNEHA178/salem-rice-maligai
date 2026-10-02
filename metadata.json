@@ -1,0 +1,6 @@
+{
+  "name": "Salem Rice & Maligai",
+  "description": "Authentic Salem rice, daily groceries, and provisions with dual Retail and Wholesale pricing for families and business owners.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

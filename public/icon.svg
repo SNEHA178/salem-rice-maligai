@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16402A" />
+      <stop offset="100%" stop-color="#205A3B" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DFBA5C" />
+      <stop offset="50%" stop-color="#CFA13A" />
+      <stop offset="100%" stop-color="#B58A2B" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Background Circle/Squircle -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+
+  <!-- Outer Elegant Gold Border ring -->
+  <rect x="24" y="24" width="464" height="464" rx="92" fill="none" stroke="url(#goldGrad)" stroke-width="6" opacity="0.4" />
+
+  <!-- Rice Grains / Bushel Symbol -->
+  <g transform="translate(256, 210)" filter="url(#shadow)">
+    <!-- Central Stalk -->
+    <path d="M 0 110 Q 0 40 0 -80" stroke="url(#goldGrad)" stroke-width="7" stroke-linecap="round" fill="none" />
+
+    <!-- Left Grains -->
+    <path d="M 0 -50 C -35 -65 -45 -35 0 -25" fill="url(#goldGrad)" />
+    <path d="M 0 -15 C -45 -30 -55 5 0 15" fill="url(#goldGrad)" />
+    <path d="M 0 25 C -50 10 -60 45 0 55" fill="url(#goldGrad)" />
+    <path d="M 0 65 C -45 50 -55 85 0 95" fill="url(#goldGrad)" />
+
+    <!-- Right Grains -->
+    <path d="M 0 -50 C 35 -65 45 -35 0 -25" fill="url(#goldGrad)" />
+    <path d="M 0 -15 C 45 -30 55 5 0 15" fill="url(#goldGrad)" />
+    <path d="M 0 25 C 50 10 60 45 0 55" fill="url(#goldGrad)" />
+    <path d="M 0 65 C 45 50 55 85 0 95" fill="url(#goldGrad)" />
+
+    <!-- Top Grain Crown -->
+    <path d="M 0 -80 C -15 -110 15 -110 0 -80" fill="url(#goldGrad)" />
+    <circle cx="0" cy="-90" r="10" fill="#FAF8F2" />
+  </g>
+
+  <!-- Rice Bowl / Base Accent -->
+  <path d="M 176 345 Q 256 385 336 345 L 348 360 Q 256 405 164 360 Z" fill="url(#goldGrad)" opacity="0.9" />
+
+  <!-- Typography: SALEM RICE -->
+  <text x="256" y="415" text-anchor="middle" font-family="'Poppins', sans-serif" font-weight="700" font-size="34" fill="#FAF8F2" letter-spacing="4">SALEM RICE</text>
+  <text x="256" y="445" text-anchor="middle" font-family="'Poppins', sans-serif" font-weight="500" font-size="20" fill="url(#goldGrad)" letter-spacing="6">&amp; MALIGAI</text>
+</svg>
