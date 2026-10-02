@@ -154,7 +154,7 @@ authRouter.post('/login', async (req: Request, res: Response) => {
       });
 
       // Special check for primary store helpline phone mapping to admin
-      if (!user && (loginId === '8973203053' || loginId === '9842712345' || loginId === 'admin@salemrice.com')) {
+      if (!user && (loginId === '8973203053' || loginId === '8946071718' || loginId === 'gccamarnath@gmail.com')) {
         user = await User.findOne({ role: 'ADMIN' });
       }
 
@@ -166,11 +166,8 @@ authRouter.post('/login', async (req: Request, res: Response) => {
       }
 
       // Check password with bcrypt or standard store passwords
-      const isMatch =
-        (await bcrypt.compare(password, user.passwordHash).catch(() => false)) ||
-        user.passwordHash === password ||
-        (user.role === 'ADMIN' && (password === (process.env.ADMIN_PASSWORD_SECRET || 'salemadmin2026') || password === 'admin123' || password === 'admin')) ||
-        (user.role === 'CUSTOMER' && (password === 'customer123' || password === 'password123'));
+     const isMatch =
+  await bcrypt.compare(password, user.passwordHash).catch(() => false);
 
       if (!isMatch) {
         return res.status(401).json({
